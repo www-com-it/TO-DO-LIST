@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logosito.png" type="image/png">
+</head>
+<body>
+    
+    <div class="header">
+        <h1>TO-DO LIST</h1>
+        <input id="input" required placeholder="Enter your activity...">
+            <div class="buttons">
+                <button id="button" onclick="submit()">ADD</button>
+                <button onclick="reload()">CLEAR ALL</button>
+            </div>
+    </div>
+
+    <ul id="lista"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

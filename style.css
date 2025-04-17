@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Expanded+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    min-height: 100vh;
+    font-family: Lexend;
+    background-color: #023047;
+}
+
+/*! HEADER */ 
+
+.header {
+    width: 75%;
+    background-color: #219EBC;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border: none;
+    border-radius: 20px;    
+    padding: 20px;
+}
+
+.header h1 {
+    color: #FB8500;
+    font-size: 50px;
+    user-select: none;
+}
+
+.header input {
+    border: none;
+    padding: 15px 0 15px 13px;
+    font-size: 22px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.buttons {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons button {
+    padding: 12px 23px 12px 23px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #023047;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #FFB703;
+}
+
+.buttons button:hover {
+    background-color: #ffa43c;
+}
+
+.buttons button:active {
+    background-color: #FB8500;
+}
+
+/*! LISTA */
+
+#lista {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    overflow-y: auto;
+}
+
+#lista li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 40px 12px 40px;
+    background-color: #8ECAE6;
+    font-size: 22px;
+    color: #023047;
+    transition: 0.2s ease;
+    transition: border-radius 0s;
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+    user-select: none;
+    word-break: break-all;
+}
+
+#lista li:nth-child(odd) {
+    background-color: #219EBC;
+}
+
+#lista li:nth-child(1) {
+    border-radius: 10px 10px 0 0;
+}
+
+#lista li:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+#lista li:hover {
+    background-color: #32647c;
+    color: white;
+}
+
+#lista li.checked {
+    background-color: #FFB703;
+    color: white;
+    text-decoration: line-through;
+}
+
+/*! SCROLLBAR */
+
+#lista {
+    scrollbar-width: 100px;
+    scrollbar-color: #FB8500 white;
+}
+
+/*! CODICE RESPONSIVE */
+
+@media (max-width: 767px) {
+    .header h1 {
+        font-size: 33px;
+    }
+
+    .header input {
+        font-size: 16px;
+        min-width: 75%;
+    }
+
+    .buttons {
+        min-width: 75%;
+        gap: 10px;
+    }
+
+    .buttons button {
+        font-size: 14px;
+    }
+
+    #lista li {
+        font-size: 18px;
+    }
+}
